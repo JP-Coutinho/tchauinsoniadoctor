@@ -29,6 +29,7 @@ const Menu = () => {
       if (!user) {
         navigate("/login");
       }
+      else
         localStorage.setItem("userName", user.displayName || user.email);
     });
     return () => unsubscribe();
