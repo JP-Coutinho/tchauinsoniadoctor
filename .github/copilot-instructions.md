@@ -1,0 +1,7 @@
+- Projeto React com Node.js 20.
+- Usamos styled-components para estilização.
+- crie um arquivo separado para cada componente.
+- utilize um arquivo separado para o `styled-components`.
+- Componentes ficam em `src/components`, páginas em `src/pages`.
+- Estilos globais estão em `src/styles/GlobalStyle.js`.
+- Preferimos funções assíncronas com `try/catch`.
