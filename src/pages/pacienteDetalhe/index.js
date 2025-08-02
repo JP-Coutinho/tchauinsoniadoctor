@@ -158,7 +158,7 @@ const PacienteDetalhe = () => {
 
   return (
     <>
-      <Menu userName="Médico" />
+      <Menu />
       <Container>
         <Button onClick={() => navigate("/")} style={{ marginBottom: 16 }}>
           ← Voltar para lista

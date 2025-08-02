@@ -122,7 +122,7 @@ const ListaPacientes = ({ userName }) => {
 
   return (
     <>
-      <Menu userName={userName} />
+      <Menu />
       <PageContainer>
         <Title>Lista de Pacientes</Title>
         <SearchBarContainer>

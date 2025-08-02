@@ -20,7 +20,7 @@ import {
   PersonalNoteList,
   PersonalNoteItem,
 } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import pacientes from "../pacientesData";
 
 // Extrai todas as consultas agendadas dos pacientes
@@ -64,7 +64,7 @@ function getConsultasProximas(consultas, dataAtual) {
 
 const Agenda = () => {
   // Recupera o nome do usuário do localStorage (ajuste conforme seu fluxo)
-  const userName = localStorage.getItem("userName") || "Médico";
+  const userName = localStorage.getItem("userName");
 
   const hoje = new Date().toISOString().split("T")[0];
   const [selectedDate, setSelectedDate] = useState(hoje);
@@ -104,7 +104,7 @@ const Agenda = () => {
 
   return (
     <>
-      <Menu userName={userName} />
+      <Menu />
       <Container>
         <Title>Minha Agenda</Title>
         <FlexRow>

@@ -204,6 +204,9 @@ const Relatorio = () => {
       })),
     [pacientes]
   );
+  
+  const userName = localStorage.getItem("userName");
+  const isMobile = window.innerWidth <= 600;
 
   // Função utilitária para buscar pacientes filtrados corretamente
   const getPacientesFiltrados = () => {
@@ -269,7 +272,7 @@ const Relatorio = () => {
 
   return (
     <>
-      <Menu userName="Médico" />
+      <Menu />
       <Container>
         <Title>Relatórios e BI</Title>
         <FiltrosRelatorio
@@ -353,7 +356,7 @@ const Relatorio = () => {
               <LineChart data={dispersaoSono.data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="dia" />
-                <YAxis domain={[0, 12]} />
+                <YAxis domain={isMobile ? [0, 12] : [0, 'auto']} /> {/* Mantém o eixo Y de 0 a 12 */}
                 <Tooltip />
                 {dispersaoSono.nomes.map((nome, idx) => (
                   <Line

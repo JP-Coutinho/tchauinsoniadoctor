@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto; // Desce o container inteiro abaixo do menu fixo
   padding: 32px 16px;
 `;
 
